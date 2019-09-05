@@ -8,26 +8,26 @@ function App() {
   return (
           <div className="demo-big-content">
               <Layout>
-                  <Header className="header-color" title="Title" scroll>
-                      <Navigation>
-                          <Link to="/resume">Resume</Link>
-                          <Link to="/aboutme">About Me</Link>
-                          <Link to="/projects">Projects</Link>
-                          <Link to="/contact">Contact</Link>
-                      </Navigation>
-                  </Header>
-                  <Drawer title="Title">
-                      <Navigation>
-                        <Link to="/resume">Resume</Link>
-                        <Link to="/aboutme">About Me</Link>
-                        <Link to="/projects">Projects</Link>
-                        <Link to="/contact">Contact</Link>
-                      </Navigation>
-                  </Drawer>
-                  <Content>
-                      <div className="page-content" />
-                      <Main/>
-                  </Content>
+                    <Header className="header-color" title={<Link style={{textDecoration: 'none', color: '#fff'}} to="/">Home</Link> } scroll href="/">
+                        <Navigation>
+                            <Link to="/resume">Resume</Link>
+                            <Link to="/aboutme">About Me</Link>
+                            <Link to="/projects">Projects</Link>
+                            <Link to="/contact">Contact</Link>
+                        </Navigation>
+                    </Header>
+                    <Drawer title={<Link style={{textDecoration: 'none'}} to="/">Home</Link> }>
+                        <Navigation>
+                            <Link to="/resume">Resume</Link>
+                            <Link to="/aboutme">About Me</Link>
+                            <Link to="/projects">Projects</Link>
+                            <Link to="/contact">Contact</Link>
+                        </Navigation>
+                    </Drawer>
+                    <Content>
+                        <div className="page-content" />
+                        <Main/>
+                    </Content>
               </Layout>
           </div>
   );
